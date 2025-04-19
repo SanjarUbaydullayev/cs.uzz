@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS 1.6 Skinlar</title>
+  <link rel="stylesheet" href="skin.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+  <a href="1bet.html" class="back-button">← Orqaga</a>
+
+  <div class="weapon-gallery">
+    <div class="weapon-card">
+      <img src="ak.jpg" alt="AK-47">
+      <span>AK-47</span>
+    </div>
+    <div class="weapon-card">
+      <img src="m14.jpg" alt="M4A1">
+      <span>M4A1</span>
+    </div>
+    <div class="weapon-card">
+      <img src="awp.jpg" alt="AWP">
+      <span>AWP</span>
+    </div>
+    <div class="weapon-card">
+      <img src="deagle.jpg" alt="Desert Eagle">
+      <span>Deagle</span>
+    </div>
+    <div class="weapon-card">
+      <img src="usp.jpg" alt="USP">
+      <span>USP</span>
+    </div>
+    <div class="weapon-card">
+      <img src="famas.jpg" alt="Famas">
+      <span>Famas</span>
+    </div>
+  </div>
+
+  <div class="upload-section">
+    <h2>Skin Faylni Yuklang</h2>
+    <input type="file" id="skinUpload" accept="image/*">
+    <div class="preview-box" id="previewBox"></div>
+  </div>
+
+  <script>
+    const skinInput = document.getElementById('skinUpload');
+    const previewBox = document.getElementById('previewBox');
+
+    skinInput.addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          previewBox.style.backgroundImage = `url('${e.target.result}')`;
+        }
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

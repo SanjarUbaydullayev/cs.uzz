@@ -1,0 +1,95 @@
+/* cs.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background: url('https://wallpapercave.com/wp/wp2465924.jpg') no-repeat center center/cover;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    animation: fadeInDown 1.2s ease;
+  }
+
+  header h1 {
+    font-size: 3em;
+    animation: slideIn 1.5s ease-in-out;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+  }
+
+  nav a:hover {
+    transform: scale(1.1);
+    color: #00ffcc;
+  }
+
+  section {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  section img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #00ffcc;
+  }
+
+  section h2 {
+    margin-bottom: 10px;
+    color: #00ffcc;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 30px;
+    font-size: 1.1em;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes fadeInDown {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes slideIn {
+    from {opacity: 0; transform: translateX(-100px);}
+    to {opacity: 1; transform: translateX(0);}
+  }
